@@ -48,15 +48,20 @@ let isLoggedIn :boolean = false;
 // $ 5) Any Type in TypeScript
 
 // -> any type in TypeScript is a generic type used when a variable's type is unknown or when the variable's type hasn't yet been defined. 
-// -> The any type is useful when converting existing JavaScript to TypeScript 
-// -> as it allows one to gradually opt-in and opt-out of type checking during compilation.
-// ->
+// -> The any type is useful when converting existing JavaScript to TypeScript as it allows one to gradually opt-in and opt-out of type checking during compilation.
+
+// -> TypeScript has a special type, any, that you can use whenever you don't want a particular value to cause typechecking errors.
+
+// --> You usually avoid this, though, because ANY isn't type-checked. Use the compiler flag noImplicitAny to flag any implicit ANY as an error.
+// --> This is usually done in config.ts file.
+
 let hero;
 
 function getHero(){
     return "thor"
 }
-
+// -> the function shouldn't be defined like this. The function should have more value. 
+// -> So in the stricter check you cannot return a Boolean value. You should always be returning a string value.
 hero = getHero();
 
 
