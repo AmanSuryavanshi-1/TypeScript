@@ -117,9 +117,11 @@ function consoleError(errmsg : string) : void {
 // ~ EG 8 Never
 // -> Some function never returns a  value
 // -> Signifies that a function never returns normally or throws an error that can't be handled.
-// -> Useful for functions that always loop infinitely, throw exceptions, or exit the program.
+// ->  Useful for functions that always loop infinitely, throw exceptions, or exit the program.
 function handleError(errmsg : string) : never {
     throw new Error(errmsg);
     // return 1;       // ? Error: void type will return no value
 } 
-        export{}
+
+
+export{}
