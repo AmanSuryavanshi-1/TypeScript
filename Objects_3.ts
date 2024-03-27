@@ -22,16 +22,37 @@
 //  -> Aliasing complex object types, union types, or function types to make them more readable.
 //  -> Creating reusable type definitions for frequently used data structures or patterns.
 
-type User = {
-    name : string,
-    email : string,
-    isActive : boolean
-}
+// ~ EG 1
+        /* type User = {
+            name : string,
+            email : string,
+            isActive : boolean
+        } */
 
 // => Now we can use the above User which defines the types of the elements
 // => this way we will be able to reuse the types & make it more readable.
-function createUser(uniqueUser: User): User{
-    return {name:"", email:"", isActive:true}
-}
+    /* function createUser(uniqueUser: User): User{
+        return {name:"", email:"", isActive:true}
+    }
 
-createUser({name: "", email: "", isActive: false})
+    createUser({name: "", email: "", isActive: false}) */
+
+// ~ EG 2
+// -> This is convenient, but it’s common to want to use the same type more than once and refer to it by a single name.
+// -> A type alias is exactly that - a name for any type. The syntax for a type alias is:
+
+type Point = {
+  x: number;
+  y: number;
+};
+function printCoord(pt: Point) {
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
+}
+ 
+printCoord({ x: 100, y: 100 });
+
+// You can actually use a type alias to give a name to any type at all, not just an object type.
+// For example, a type alias can name a union type:
+
+type ID = number | string;
