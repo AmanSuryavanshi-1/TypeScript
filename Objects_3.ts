@@ -1,4 +1,4 @@
-// $ Bad Behavior of Objects while defining its Types
+// $ 7) Bad Behavior of Objects while defining its Types
         // const User = {
         //     name : 'John',
         //     email : 'john@gmail.com',
@@ -12,7 +12,7 @@
 //  => Giving error for email bcz createUser function does not have it.
 //  => So, to make the intake of email or undefined function optional we can use Type alias.
 
-// $ 7) Type Aliases
+// $ 8) Type Aliases
 // --> Purpose:
 //  -> Assign a more descriptive or convenient name to an existing type.
 //  -> Improve code understanding by making complex types or frequently used types easier to reference.
@@ -56,3 +56,24 @@ printCoord({ x: 100, y: 100 });
 // For example, a type alias can name a union type:
 
 type ID = number | string;
+
+// $ 9) readonly keyword in typescript
+
+// -> Prefix readonly is used to make a property as read-only. 
+// -> Read-only members can be accessed outside the class, but their value cannot be changed.
+type User = {
+  readonly _id: string
+  name: string
+  email: string
+  isActive: boolean
+}
+
+let myUser: User ={
+  _id: "1235",
+  name: "h",
+  email: "aman@mail.com",
+  isActive: false
+}
+
+// myUser._id = "asd" // ? Throws Error That :- Cannot assign to '_id' because it is a read-only property.
+myUser.email = "aman@mail.com"
