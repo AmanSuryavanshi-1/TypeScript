@@ -1,5 +1,5 @@
-    var user = { name: "Aman", age: 21 };
-    console.log(user);
+var user = { name: "Aman", age: 21 };
+console.log(user);
 
 // $ 3) No TypeSafety
 
