@@ -57,15 +57,19 @@ printCoord({ x: 100, y: 100 });
 
 type ID = number | string;
 
-// $ 9) readonly keyword in typescript
+// $ 9) readonly keyword & optional in typescript
 
 // -> Prefix readonly is used to make a property as read-only. 
 // -> Read-only members can be accessed outside the class, but their value cannot be changed.
+// ~ EG 1 :-
 type User = {
   readonly _id: string
   name: string
   email: string
   isActive: boolean
+  creditCardNum ?: number;
+  // -> Optional (?) is useful when dealing with situations where there may or may not be variables or parameters.
+  // -> This feature allows for more flexible and secure code writing
 }
 
 let myUser: User ={
@@ -77,3 +81,18 @@ let myUser: User ={
 
 // myUser._id = "asd" // ? Throws Error That :- Cannot assign to '_id' because it is a read-only property.
 myUser.email = "aman@mail.com"
+
+// ~ EG 2 :-
+type cardNumber = {
+  cardNum: string
+}
+type cardDate = {
+  cardDa: string
+}
+// -> Defines a type named cardDetails.
+// -> This type combines properties from cardNumber and cardDate using intersection (&).
+// -> It adds an additional property:
+// -> cvv: A number to store the card's security code (CVV).
+type cardDetails = cardNumber & cardDate & {
+  cvv : number
+}
