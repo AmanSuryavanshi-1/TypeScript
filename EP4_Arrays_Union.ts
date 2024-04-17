@@ -54,10 +54,10 @@ type Admin = {
     id:number
 }
 
-let aman: User | Admin = {name: "Aman", id:12}
+let aman1: User | Admin = {name: "Aman", id:12}
 
 // Allowed to redefined users
-aman = {username: "Aman", id:12}
+aman1 = {username: "Aman", id:12}
 
 //  @ EG 3
 
