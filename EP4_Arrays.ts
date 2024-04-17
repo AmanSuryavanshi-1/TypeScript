@@ -30,7 +30,7 @@ allUsers.push({
     isActive: true,
 });
 
-// $ Union Type
+// $ 11) Union Type
 // -> Use union type instead of any in TS (Recommended)
 // -> In TypeScript, a union type allows you to declare a variable that can hold values of different types. You define a union type by using the pipe | symbol between the types you want to include
 
