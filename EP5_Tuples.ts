@@ -103,7 +103,7 @@ enum SeatChoice {
 // -> It allows you to specify the structure of an object including its properties and methods, without providing the implementation details. 
 // -> Think of it as a blueprint or a set of guidelines for how an object should be shaped.
 
-interface User{
+interface User12{
 readonly dbId: number,  // cannot be changed
 email: string,
 userId?: number,        // optional pass it or not doesn't matter ?
@@ -113,7 +113,7 @@ startTrial(): string,   // OR startTrial:() => string,
 getCoupon(couponName: string ,value: number):number
 }
 
-const aman: User = {dbId:22, email: "h@history.com",
+const aman1: User12 = {dbId:22, email: "h@history.com",
     userId:22,
     startTrial:() =>{
         return "trial started";
