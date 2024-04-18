@@ -91,3 +91,41 @@ const amanOP: User12 = {dbId:22, email: "a@history.com",
 // => Choosing Between Interfaces and Types:
 // -> Use interfaces when you need to define a contract for objects, ensuring they have the correct properties and types.
 // -> Use types when you simply need to specify the data type of a variable, function argument, or return value.
+
+// ~ Why interfaces are important
+// -> this interface says that just go ahead and take photo okay that's same now in this while taking the photo i think that there should be a couple of things that should be defined
+
+// whoever is designing a class that you can take a photo from your web application should always implement that these are the bare minimum basics 
+// if anybody wants to create a feature of taking photos should always and always follow this interface
+// interface never involves the definition. It just provide the must have things in a feature
+interface TakePhoto{
+    cameraMode: string,
+     filter:string,
+     burst: number
+}
+
+class instagram implements TakePhoto{
+    // we have to take all these interface properties to create a new feature or else it will give squiggly lines
+    // To get all the properties we will create a constructor
+    constructor( 
+        public cameraMode: string,
+        public filter: string,
+        public burst: number
+     ){}
+}
+
+// you can do more than necessary but not less than necessary
+class youtube implements TakePhoto{
+    constructor( 
+        public cameraMode: string,
+        public filter: string,
+        public burst: number,
+        public short: string
+     ){}
+}
+
+// https://www.youtube.com/watch?v=30LWjhZzg50
+
+
+
+
