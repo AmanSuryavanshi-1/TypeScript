@@ -84,15 +84,3 @@ const data2: string[] = ['1','2','3'];
 // -> use union instead of any 
  const data3: (string | number | boolean) [] = ['1','2',3, true];
  */
-
-
-
-
-
-
-
-
-
-
-
-

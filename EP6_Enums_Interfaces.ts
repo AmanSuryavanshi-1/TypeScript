@@ -123,9 +123,3 @@ class youtube implements TakePhoto{
         public short: string
      ){}
 }
-
-// https://www.youtube.com/watch?v=30LWjhZzg50
-
-
-
-

@@ -62,7 +62,7 @@ type ID = number | string;
 // -> Prefix readonly is used to make a property as read-only. 
 // -> Read-only members can be accessed outside the class, but their value cannot be changed.
 // ~ EG 1 :-
-type User = {
+type UserAS = {
   readonly _id: string
   name: string
   email: string
@@ -72,7 +72,7 @@ type User = {
   // -> This feature allows for more flexible and secure code writing
 }
 
-let myUser: User ={
+let myUser: UserAS ={
   _id: "1235",
   name: "h",
   email: "aman@mail.com",

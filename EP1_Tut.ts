@@ -65,11 +65,5 @@ function getHero(){
 hero = getHero();
 
 
-
-
-
-
-
-
 export {}
 // To ignore squiggly lines

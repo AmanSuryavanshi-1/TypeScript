@@ -41,32 +41,3 @@ console.log(myExtendedTuple[4]); // Output: true
 
 // => Tuples can be quite handy in scenarios where you need a fixed collection of elements with different types and a specific order.
 // => However, it's important to use them judiciously and ensure that the structure remains clear and maintainable in your codebase.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -32,3 +32,6 @@ class ShortUser{
         // this.city = "Bangalore"; 
     }
 }
+
+// continue from here why interfaces are imp.....
+// https://www.youtube.com/watch?v=30LWjhZzg50
