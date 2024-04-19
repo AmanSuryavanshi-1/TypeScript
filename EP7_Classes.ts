@@ -33,5 +33,5 @@ class ShortUser{
     }
 }
 
-// continue from here why interfaces are imp.....
+// continue from here why interfaces are imp..... 3:27:12 (Abstract class)
 // https://www.youtube.com/watch?v=30LWjhZzg50
