@@ -5,7 +5,7 @@
 
 // --> Each member has an associated numeric value, which can be either automatically assigned or explicitly defined.
 
-// @ EG 1
+// ~ EG 1
 
 enum TrafficLight {
     Red,
@@ -29,7 +29,7 @@ let currentLight: TrafficLight = TrafficLight.Green;
 // }
 
 
-// @ EG 2
+// ~ EG 2
 
 // --> In this enum, if no value is assigned explicitly, TypeScript automatically assigns numeric values starting from 0. However, you can assign specific values to enum members:
 enum Direction {
@@ -42,7 +42,7 @@ enum Direction {
 
 // -> Enums are handy for defining a set of related constants, providing type safety, and improving code readability.
 
-// @ EG 3
+// ~ EG 3
 
 enum SeatChoice {
     AISLE = "aisle",
@@ -84,20 +84,22 @@ const amanOP: User12 = {dbId:22, email: "a@history.com",
 
 // -> They are particularly useful when you want to enforce a specific structure or shape for objects in your application.
 
-// ~ Interfaces vs Types
-// -> Interfaces are for defining object structures (what properties an object should have and their types).
-// -> Types are for defining data types of variables, function parameters, and return values.
+// & Interfaces vs Types
+// & Interfaces are for defining object structures (what properties an object should have and their types).
+// & Types are for defining data types of variables, function parameters, and return values.
 
 // => Choosing Between Interfaces and Types:
 // -> Use interfaces when you need to define a contract for objects, ensuring they have the correct properties and types.
 // -> Use types when you simply need to specify the data type of a variable, function argument, or return value.
 
-// ~ Why interfaces are important
-// -> this interface says that just go ahead and take photo okay that's same now in this while taking the photo i think that there should be a couple of things that should be defined
+// & Why interfaces are important
+// & Let's understand it with a example
+// -> The below code is a class that implements an interface. The interface is a set of guidelines for how an object should be shaped. It also defines the implementation details for each member defined in the interface.
+// -> Interface says that just go ahead and take photo. That's same now in this while taking the photo that there should be a couple of things that should be defined
 
 // whoever is designing a class that you can take a photo from your web application should always implement that these are the bare minimum basics 
-// if anybody wants to create a feature of taking photos should always and always follow this interface
-// interface never involves the definition. It just provide the must have things in a feature
+// --> If anybody wants to create a feature of taking photos should always and always follow this interface
+// --> Interface never involves the definition. It just provide the must have things in a feature
 interface TakePhoto{
     cameraMode: string,
      filter:string,
@@ -114,7 +116,7 @@ class instagram implements TakePhoto{
      ){}
 }
 
-// you can do more than necessary but not less than necessary
+// --> You can do more than necessary but not less than necessary
 class youtube implements TakePhoto{
     constructor( 
         public cameraMode: string,

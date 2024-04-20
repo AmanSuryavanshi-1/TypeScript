@@ -6,10 +6,11 @@
 const Tuser: (string | number)[]=[1, "Aman"]
 
 //--> Tuples maintain the order of data, unlike arrays where you can mix string and number types freely. In tuples, the order matters.
+
 let userA: [ number, string, boolean]
 userA = [1,"Aman", true]
 
-// @ Eg 1
+// ~ Eg 1
 // Define a tuple
 let myTuple: [string, number, boolean];
 
@@ -21,7 +22,7 @@ console.log(myTuple[0]); // Output: Hello
 console.log(myTuple[1]); // Output: 123
 console.log(myTuple[2]); // Output: true
 
-// @ Eg 2
+// ~ Eg 2
 // -> TypeScript also provides some additional features for tuples, such as optional and rest elements.
 // -> Optional elements allow you to declare certain elements of a tuple as optional by appending a ? to their type.
 // -> Rest elements allow you to capture a variable number of elements into a single tuple element.

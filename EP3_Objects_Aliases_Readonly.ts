@@ -1,13 +1,8 @@
 // $ 7) Bad Behavior of Objects while defining its Types
-        // const User = {
-        //     name : 'John',
-        //     email : 'john@gmail.com',
-        //     isActive : true
-        // }
 
-        // function createUser({name: string, isPaid: boolean}){}
+     /* function createUser({name: string, isPaid: boolean}){}
 
-        // createUser({name:"John", isPaid:false, email: "john@gmail.com"})
+        createUser({name:"John", isPaid:false, email: "john@gmail.com"})     // ?  gives error for email */ 
 
 //  => Giving error for email bcz createUser function does not have it.
 //  => So, to make the intake of email or undefined function optional we can use Type alias.
@@ -61,6 +56,7 @@ type ID = number | string;
 
 // -> Prefix readonly is used to make a property as read-only. 
 // -> Read-only members can be accessed outside the class, but their value cannot be changed.
+
 // ~ EG 1 :-
 type UserAS = {
   readonly _id: string

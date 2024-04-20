@@ -11,7 +11,7 @@ const array3: Array<number> = []
 array.push("spidermon")
 array2.push(2)
 
-// ~ EG2
+// ~ EG 2
 
 // Define the User interface
 type User1 = {
@@ -19,7 +19,9 @@ type User1 = {
     isActive: boolean;
 }
 //  ! If you define a type with the same name in multiple files, it can lead to conflicts.
-//  ! For instance, if you have a type named User in one file and another file also defines a type named User, it might cause confusion or conflicts when importing or using these types.
+//  ! For instance, if you have a type named User in one file and another file also defines a type named User,
+//    it might cause confusion or conflicts when importing or using these types.
+
 //--> To avoid this conflict, I changed it to user1
 // Declare an array of Users
 const allUsers: User1[] = [];
@@ -32,9 +34,10 @@ allUsers.push({
 
 // $ 11) Union Type
 // -> Use union type instead of any in TS (Recommended)
-// -> In TypeScript, a union type allows you to declare a variable that can hold values of different types. You define a union type by using the pipe | symbol between the types you want to include
+// -> In TypeScript, a union type allows you to declare a variable that can hold values of different types.
+// -> You define a union type by using the pipe | symbol between the types you want to include
 
-// @EG 1
+// ~ EG 1
 // Defining a union type
 let myVar: number | string;
 
@@ -43,15 +46,15 @@ myVar = 10; // Valid
 myVar = "Hello"; // Valid
 // myVar = true; // ? Error: Type 'boolean' is not assignable to type 'number | string'
 
-//  @ EG 2
+// ~ EG 2
 type User = {
     name : string;
-    id:number;
+    id : number;
 }
 
 type Admin = {
-    username:string;
-    id:number
+    username : string;
+    id : number
 }
 
 let aman1: User | Admin = {name: "Aman", id:12}
@@ -59,9 +62,7 @@ let aman1: User | Admin = {name: "Aman", id:12}
 // Allowed to redefined users
 aman1 = {username: "Aman", id:12}
 
-//  @ EG 3
-
-
+// ~ EG 3
 getDBId(3)
 getDBId("3");
 

@@ -2,7 +2,7 @@
 
 // --> Whenever there's any then there's a problem in TypeScript.
 
-// ~ EG 1
+// ~ EG 1 
         /* // function addTwo(num){
         // num.toUpperCase();                // ? No Error
         //     return num + 2;
@@ -16,7 +16,7 @@
 
         addTwo(5); */
 
-// ~ EG 2
+// ~ EG 2 
         /* const getUpper = (val: string) => {
             return val.toUpperCase();
         }
@@ -25,13 +25,12 @@
         // getUpper("5");                  // ? No Error bcz it's a string
         getUpper("Hello") */
 
-// ~ EG 3
+// ~ EG 3 
         /* const signUpUser = (name: string, email:string, isPaid: boolean) =>{}
 
         signUpUser("aman","aman@gmail.com",false); */
-
-
-// ~ EG 4 => When only known perimeters are passed
+ 
+// ~ EG 4 When only known perimeters are passed 
         /* // const loginUser = (name: string, email:string, isPaid: boolean) =>{}
         // loginUser("as", "as@gmail.com" )        // ? Gives error 
 
@@ -40,15 +39,14 @@
 
         loginUser("as", "as@gmail.com" )        // ?  No error  */
 
-// ~ EG 5 How to give a type to the value returned by function
+// ~ EG 5 How to give a type to the value returned by function 
 
         /* function addTwo(num: number): number {
                 //  return "hello";     // ? Gives Error
                     return num + 2;     // ? No Error
                 } */
 
-
-// ~ EG 6 => How function can return two types?
+// ~ EG 6 How function can return two types? 
 
         /* const getValue = (myVal: number): boolean => {
             if(myVal>5){
@@ -57,7 +55,7 @@
             return "OK"         // ? gives error
         } */
 
-// => TypeScript doesn't directly support functions returning two distinct types.
+// ~ EG 7 TypeScript doesn't directly support functions returning two distinct types.
 // -> However, there are several effective techniques to achieve a similar behavior:
 
 // --> 1. Union Types:
@@ -69,7 +67,8 @@
             }
             return "OK"        
         }  */
-// --> 2. Tuples:
+
+// --> 2. Tuples(Detailed in EP5_Tuples):
 // -> For returning a fixed-size array of specific types, use tuples.
 // -> Declare the tuple type with the desired element types.
         /* function getFullName(firstName: string, lastName: string): [string, string] {
@@ -91,13 +90,13 @@
 // -> In case of string object it automatically switches the type to string.
 // -> & in case of number object it automatically switches the type to number.
 
-// -> We can avoid mentioning type in map
+// => We can avoid mentioning type in map
 
         /* heros.map((hero : string)=>{
             return `hero is ${hero}`
         }) */
 
-        // --> The best way of wrting it by mentioning the type which map will return & avoiding the type which map is taking
+        // --> The best way of writing it by mentioning the type which map will return & avoiding the type which map is taking
         // --> Mentioning the type of return value is string
         
         /* heros.map((hero) : string =>{
@@ -117,7 +116,7 @@ function consoleError(errmsg : string) : void {
 // ~ EG 8 Never
 // -> Some function never returns a  value
 // -> Signifies that a function never returns normally or throws an error that can't be handled.
-// ->  Useful for functions that always loop infinitely, throw exceptions, or exit the program.
+// -> Useful for functions that always loop infinitely, throw exceptions, or exit the program.
 function handleError(errmsg : string) : never {
     throw new Error(errmsg);
     // return 1;       // ? Error: void type will return no value
